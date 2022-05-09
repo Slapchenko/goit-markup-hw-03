@@ -22,6 +22,28 @@ body {
   color: var(--main-txt-cl);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .link {
   text-decoration: none;
   color: currentColor;
@@ -45,9 +67,23 @@ body {
   color: var(--secondary-txt-cl);
 }
 
+.container {
+  outline: 2px solid red;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Page header */
 .header {
   background-color: var(--main-bg-cl);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
 }
 /* Header main navigation */
 .logo {
@@ -57,6 +93,11 @@ body {
   line-height: 1.2;
   color: var(--accent-cl);
 }
+
+.logo-header {
+  margin-right: 93px;
+}
+
 .logo .logo-mode-dark {
   color: #000000;
 }
@@ -64,8 +105,23 @@ body {
   color: #ffffff;
 }
 
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+.nav-item {
+  margin-right: 50px;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
 .nav-link,
 .сontacts-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14px;
@@ -84,12 +140,33 @@ body {
   color: var(--accent-cl);
 }
 
+.contacts-header {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.сontacts-list {
+  display: flex;
+  align-items: center;
+}
+
+.сontacts-item {
+  margin-right: 50px;
+}
+
+.сontacts-item:last-child {
+  margin-right: 0;
+}
+
 /* Hero section */
 .hero {
   background-color: var(--dark-bg-cl);
+  text-align: center;
 }
 
 .hero-title {
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -105,7 +182,6 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
-  display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
@@ -120,12 +196,35 @@ body {
 }
 
 /* Our Features section and What are we doing section*/
+.features-container,
+.services-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.features-item {
+  margin-right: 30px;
+  width: 270px;
+  height: 101px;
+}
+
+.features-item:last-child {
+  margin-right: 0;
+}
+
 .features,
 .services {
   background-color: var(--main-bg-cl);
 }
 
+.features {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .features-item-title {
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -139,16 +238,58 @@ body {
   color: var(--main-txt-cl);
 }
 
+.services {
+  padding-bottom: 94px;
+}
+
+.services-title {
+  margin-bottom: 50px;
+}
+
+.services-list {
+  display: flex;
+  align-items: center;
+}
+
+.services-item {
+  margin-right: 30px;
+}
+
+.services-item:last-child {
+  margin-right: 0;
+}
+
 /* Our team section */
 .team {
+  padding-top: 94px;
+  padding-bottom: 94px;
   background-color: var(--secondary-bg-cl);
 }
 
+.team-title {
+  margin-bottom: 50px;
+}
+
+.team-list {
+  display: flex;
+  align-items: center;
+}
+
 .team-item {
+  margin-right: 30px;
   background-color: var(--main-bg-cl);
 }
 
+.team-item:last-child {
+  margin-right: 0;
+}
+
+.team-img {
+  margin-bottom: 30px;
+}
+
 .team-subtitle {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -157,6 +298,7 @@ body {
 }
 
 .team-text {
+  margin-bottom: 30px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
@@ -169,11 +311,25 @@ body {
   background-color: var(--dark-bg-cl);
 }
 
+.footer-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-footer {
+  margin-bottom: 20px;
+}
+
 .address {
   font-style: normal;
+  display: flex;
+  flex-direction: column;
 }
 
 .address-text {
+  margin-bottom: 9px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -181,10 +337,16 @@ body {
 }
 
 .address-link {
+  margin-bottom: 9px;
+  flex-wrap: wrap;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.address-link:last-child {
+  margin-bottom: 0;
 }
 
 /* Portfolio page */
