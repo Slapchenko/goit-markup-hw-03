@@ -13,6 +13,8 @@
   --main-bg-cl: #ffffff;
   --secondary-bg-cl: #f5f4fa;
   --dark-bg-cl: #2f303a;
+  --header-border-cl: #ececec;
+  --gallery-item-border-cl: #eeeeee;
 }
 
 body {
@@ -79,6 +81,7 @@ img {
 /* Page header */
 .header {
   background-color: var(--main-bg-cl);
+  border: 1px solid var(--header-border-cl);
 }
 
 .header-container {
@@ -191,7 +194,7 @@ img {
 
 .hero-btn:hover,
 .hero-btn:focus {
-  color: #ffffff;
+  color: var(--main-bg-cl);
   background-color: var(--hero-btn);
 }
 
@@ -403,10 +406,9 @@ img {
 
 .gallery-item {
   width: 370px;
-  min-height: 404px;
   margin-right: 30px;
   margin-bottom: 30px;
-  border: 1px solid #eeeeee;
+  border-bottom: 1px solid var(--gallery-item-border-cl);
 }
 
 .gallery-item:nth-child(3n) {
